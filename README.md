@@ -37,6 +37,13 @@ and the following mathematical constants to be used in the equation:
 
 It possible to add new functions and constants to the code by modifying the `EQ_EDIT.hpp` file.
 
+## How it Works
+The application uses the `EQ_EDIT` class to evaluate mathematical equations. The variables used in the equation are defined and their values are passed to the `Value` method of the `func_eq` object. This method evaluates the equation and returns the calculated value.
+Another way to use the code is to define the variables and the equation using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. The `getValue` method of the `func_eq` object, without any arguments, is then called to evaluate the equation.
+
+## How to Use the Code
+To use the code, you need to include the `EQ_EDIT.hpp` header file in your code. You can then create an instance of the `EQ_EDIT` class and use it to evaluate mathematical equations. See the code examples below for more details.
+
 ## Code example
 ### Example 1
 A first example is presented in the `example1.cpp` file. 
@@ -131,17 +138,6 @@ cout << "Value: " << value << endl;
 ```
 Displays the equation, the number of variables in the equation, and its calculated value.
 
-## How it Works
-
-The application uses the `EQ_EDIT` class to evaluate mathematical equations. The variables used in the equation are defined and their values are passed to the `Value` method of the `func_eq` object. This method evaluates the equation and returns the calculated value.
-
-## How to Run the Code
-
-To run the code, you need to have a C++ compiler installed on your machine. You can then compile the `main.cpp` file and run the generated binary file.
-
-## How to Use the Code
-
-To use the code, you need to include the `EQ_EDIT.hpp` header file in your code. You can then create an instance of the `EQ_EDIT` class and use it to evaluate mathematical equations.
 
 ## License
 
