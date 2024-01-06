@@ -89,7 +89,7 @@ Defines the variables `x`, `beta`, and `alpha` and the equation to evaluate.
 ```cpp
 double value = func_eq.Value(true,equation,{{"x",x},{"beta",beta},{"alpha",0.5}});
 ```
-Calls the `Value` method of the `func_eq` object to evaluate the equation. The values of the variables are passed as key-value pairs.
+Calls the `Value` method of the `func_eq` object to evaluate the equation. The equation expression, the variables, and their values are passed as arguments to the `Value` method. The first argument of the `Value` method is a boolean that indicates if the equation expression should be calculated or not. If this argument is set to `true`, the `Value` method returns the calculated value of the equation.If this argument is set to `false`, it returns `0`.
 
 ```cpp
 cout << "Equation: " << func_eq.getEquation() << endl;
@@ -122,21 +122,14 @@ int main()
     return 0;
 }
 ```
-In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. Here is a description the alternative method used in this example:
+In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class:
 
 ```cpp
 func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
 func_eq.setEquation(equation);
 double value    = func_eq.getValue();
 ```
-Sets the values of the variables and the equation to evaluate. The `getValue` method of the `func_eq` object is then called to evaluate the equation.
-
-```cpp
-cout << "Equation: " << func_eq.getEquation() << endl;
-cout << "Number of variables: " << func_eq.getNVar() << endl;
-cout << "Value: " << value << endl;
-```
-Displays the equation, the number of variables in the equation, and its calculated value.
+Sets the values of the variables and the equation to evaluate. The `getValue` method of the `func_eq` object, *without any arguments*, is then called to evaluate the equation.
 
 
 ## License
