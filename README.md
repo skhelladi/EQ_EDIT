@@ -39,7 +39,29 @@ It possible to add new functions and constants to the code by modifying the `EQ_
 
 ## Code example
 ### Example 1
-A first example is presented in the `example1.cpp` file. Here is a description of each line of code:
+A first example is presented in the `example1.cpp` file. 
+```cpp
+#include <iostream>
+#include "EQ_EDIT.hpp"
+using namespace std;
+int main()
+{
+    EQ_EDIT func_eq;
+    double x = 10;
+    double beta = 1.5;
+    string equation = "-(x^2/2)+20+2*beta+alpha";
+    double value    = func_eq.getValue(true,equation,{{"x",x},{"beta",beta},{"alpha",0.5}});
+    cout<<"----------------------------------"<<endl;
+    cout<<"          EXAMPLE 1              "<<endl;
+    cout<<"----------------------------------"<<endl;
+    cout << "Equation exp.: " << func_eq.getEquation() << endl;
+    cout << "Number of variables: " << func_eq.getNVar() << endl;
+    cout << "Value: " << value << endl;
+    return 0;
+}
+```
+
+Here is a description of each line of code:
 ```cpp
 #include "EQ_EDIT.hpp"
 ```
@@ -70,7 +92,30 @@ cout << "Value: " << value << endl;
 Displays the equation, the number of variables in the equation, and its calculated value.
 
 ### Example 2
-Another example is presented in the `example2.cpp` file. In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. Here is a description of each line of code:
+Another example is presented in the `example2.cpp` file. 
+```cpp
+#include <iostream>
+#include "EQ_EDIT.hpp"
+using namespace std;
+int main()
+{
+    EQ_EDIT func_eq;
+    double x = 10;
+    double beta = 1.5;
+    string equation = "-(x^2/2)+20+2*beta+alpha";
+    func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
+    func_eq.setEquation(equation);
+    double value    = func_eq.getValue();
+    cout<<"----------------------------------"<<endl;
+    cout<<"          EXAMPLE 2              "<<endl;
+    cout<<"----------------------------------"<<endl;
+    cout << "Equation exp.: " << func_eq.getEquation() << endl;
+    cout << "Number of variables: " << func_eq.getNVar() << endl;
+    cout << "Value: " << value << endl;
+    return 0;
+}
+```
+In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. Here is a description of each line of code:
 
 ```cpp
 func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
