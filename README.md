@@ -122,7 +122,7 @@ int main()
     return 0;
 }
 ```
-In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. Here is a description of each line of code:
+In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class. Here is a description the alternative method used in this example:
 
 ```cpp
 func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
