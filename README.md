@@ -10,12 +10,12 @@ The code allows the following mathematical operators to be used in the equation:
 - `^` - Power
 - `()` - Parentheses
 
-The code allows the following mathematical functions to be used in the equation:
+the following mathematical functions to be used in the equation:
 - `abs` - Absolute value
 - `int` - Integer part
 - `frac` - Fractional part
 - `rond` - Round
-- `log` - Logarithm
+- `log` - Logarithm (base 10)
 - `ln` - Natural logarithm
 - `exp` - Exponential
 - `sin` - Sine
@@ -31,7 +31,11 @@ The code allows the following mathematical functions to be used in the equation:
 - `ach` - Hyperbolic arccosine
 - `ath` - Hyperbolic arctangent
 
+and the following mathematical constants to be used in the equation:
+- `pi` - &pi; number
+- `e` - Euler's number
 
+It possible to add new functions and constants to the code by modifying the `EQ_EDIT.hpp` file.
 
 ## Code example
 ### Example 1
