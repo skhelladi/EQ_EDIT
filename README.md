@@ -35,7 +35,7 @@ and the following mathematical constants to be used in the equation:
 - `pi` - &pi; number
 - `e` - Euler's number
 
-It possible to add new functions and constants to the code by modifying the `EQ_EDIT.hpp` file.
+It is possible to add new functions and constants to the code by modifying the `EQ_EDIT.hpp` file.
 
 ## How it Works
 The application uses the `EQ_EDIT` class to evaluate mathematical equations. The variables used in the equation are defined and their values are passed to the `Value` method of the `func_eq` object. This method evaluates the equation and returns the calculated value.
