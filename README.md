@@ -1,6 +1,6 @@
 # EQ_EDIT - A C++ Equation Evaluator
 
-EQ_EDIT is a simple C++ code that evaluate a mathematical expression with variables and standard mathematical functions given as a string. The variables and functions used in the equation are defined and their values are passed to the function that evaluates the equation. The code is presented in a single header file `EQ_EDIT.hpp` which contains the `EQ_EDIT` class.
+EQ_EDIT is a simple C++ code that evaluate a mathematical expression with variables and some standard mathematical functions given as a string. The variables and functions used in the equation are defined and their values are passed to the function that evaluates the equation. The code is presented in a single header file `EQ_EDIT.hpp` which contains the `EQ_EDIT` class.
 
 The code allows the following mathematical operators to be used in the equation:
 - `+` - Addition
