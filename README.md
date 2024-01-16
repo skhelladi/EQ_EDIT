@@ -109,9 +109,8 @@ int main()
     EQ_EDIT func_eq;
     double x = 10;
     double beta = 1.5;
-    string equation = "-(x^2/2)+20+2*beta+alpha";
-    func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
-    func_eq.setEquation(equation);
+    func_eq.setVar({{"x",x},{"beta",beta},{"alpha",M_PI/4}});
+    func_eq.setEquation("-(x^2/2)+20+2*beta+sin(alpha)");
     double value    = func_eq.getValue();
     cout<<"----------------------------------"<<endl;
     cout<<"          EXAMPLE 2              "<<endl;
@@ -125,8 +124,8 @@ int main()
 In this example the variables are defined and the equation is set using the `setVar` and `setEquation` methods of the `EQ_EDIT` class:
 
 ```cpp
-func_eq.setVar({{"x",x},{"beta",beta},{"alpha",0.5}});
-func_eq.setEquation(equation);
+func_eq.setVar({{"x",x},{"beta",beta},{"alpha",M_PI/4}});
+func_eq.setEquation("-(x^2/2)+20+2*beta+sin(alpha)");
 double value    = func_eq.getValue();
 ```
 Sets the values of the variables and the equation to evaluate. The `getValue` method of the `func_eq` object, *without any arguments*, is then called to evaluate the equation.
